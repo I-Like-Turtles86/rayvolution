@@ -63,6 +63,16 @@ public class REVStarterBotTeleOpJava extends LinearOpMode {
     leftDrive.setPower(y - x);
     rightDrive.setPower(y + x);
   }
+  private void LeftTriggerPress() {
+    if (gamepad1.left_trigger) {
+      leftDrive.setPower(-1);
+      rightDrive.setPower(1);
+    }
+    else {
+      leftdrive.setPower(0)
+      rightDrive.SetPower(0)
+    }
+  }
   
   /**
    * Manual control for the Core Hex powered feeder and the agitator servo in the hopper
@@ -139,3 +149,4 @@ public class REVStarterBotTeleOpJava extends LinearOpMode {
   }
 
 }
+
